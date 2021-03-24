@@ -41,15 +41,6 @@ export class AppComponent implements OnInit {
   }
 
   getCaseString(): void {
-    this.filterData = [];
-    this.data.forEach((item) => {
-      if (item.includes(this.inputValue)) {
-        this.changeCaseString();
-      }
-    });
-  }
-
-  changeCaseString(): any {
     this.filterData = this.data.filter((str) =>
     (this.checked ? str : str.toLowerCase()).includes(
       this.checked ? this.inputValue : this.inputValue.toLowerCase()) );
